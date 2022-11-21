@@ -24,19 +24,21 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "3VnHIq74z"
+        "uid": "IY9HT2d4k"
       },
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "green",
+            "mode": "fixed",
+            "seriesBy": "max"
           },
           "custom": {
             "axisCenteredZero": false,
@@ -53,6 +55,9 @@
               "viz": false
             },
             "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
             "lineWidth": 1,
             "pointSize": 5,
             "scaleDistribution": {
@@ -65,10 +70,12 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -97,7 +104,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -118,10 +125,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "3VnHIq74z"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -154,10 +158,12 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -186,7 +192,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -244,6 +250,7 @@
             }
           },
           "mappings": [],
+          "max": 100,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -272,7 +279,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -330,6 +337,7 @@
             }
           },
           "mappings": [],
+          "max": 100,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -358,7 +366,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -416,6 +424,7 @@
             }
           },
           "mappings": [],
+          "max": 100,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -444,7 +453,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -498,10 +507,11 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "line+area"
             }
           },
           "mappings": [],
+          "max": 100,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -511,7 +521,7 @@
               },
               {
                 "color": "red",
-                "value": 80
+                "value": 65
               }
             ]
           }
@@ -530,7 +540,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -616,7 +626,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -1370,7 +1380,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.6",
+      "pluginVersion": "9.2.5",
       "targets": [
         {
           "datasource": {
@@ -1737,6 +1747,6 @@
   "timezone": "",
   "title": "Car Data",
   "uid": "lH2UIfS4z",
-  "version": 4,
+  "version": 14,
   "weekStart": ""
 }

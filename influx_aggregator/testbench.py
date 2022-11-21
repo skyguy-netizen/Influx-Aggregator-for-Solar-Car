@@ -27,9 +27,9 @@ def testbench():
                         org=ORG) as client:
         write_api = client.write_api(write_options=SYNCHRONOUS)
         for _ in range(1500):
-            payload.battery.set_voltage(random.randint(0, 500))
+            payload.battery.set_voltage(random.randint(0, 100))
             payload.battery.set_temperature(random.randint(0, 100))
-            payload.battery.set_range(random.randint(0, 150))
+            payload.battery.set_range(random.randint(0, 100))
             payload.battery.set_warning(random.randint(0, 1))
             payload.battery.set_bps_fault(random.randint(0, 1))
             payload.battery.set_automatic_power_opening(random.randint(0, 1))
@@ -39,8 +39,8 @@ def testbench():
             payload.tire_pressure.set_front_right(random.randint(0, 50))
             payload.motor.set_distance(random.randint(0, 150))
             payload.motor.set_motor_temperature(random.randint(0, 100))
-            payload.motor.set_motor_voltage(random.randint(0, 200))
-            payload.motor.set_speed(random.randint(0, 200))
+            payload.motor.set_motor_voltage(random.randint(0, 100))
+            payload.motor.set_speed(random.randint(0, 100))
             payload.motor.set_motor_warning(random.randint(0, 1))
             payload.icons.set_cruise_control(random.randint(0, 1))
             payload.icons.set_day_lights(random.randint(0, 1))

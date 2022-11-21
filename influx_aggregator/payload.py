@@ -11,7 +11,7 @@ class Payload:
 
     def __init__(self):
         self.uid = ""
-        self.timestamp = datetime.now()
+        self.timestamp = 0
         self.motor = Motor()
         self.battery = Battery()
         self.tire_pressure = TirePressure()
